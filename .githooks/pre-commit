@@ -1,0 +1,18 @@
+#!/bin/sh
+set -e
+
+# Ensure the script runs from the repository root
+cd "$(git rev-parse --show-toplevel)"
+
+echo "Checking for typos"
+typos
+
+echo "Fixing all markdown files..."
+
+# 1. Find every .md file in the repo (except CHANGELOG.md) and format it
+find . -type f -name "*.md" ! -name "CHANGELOG.md" -exec rumdl check --fix {} +
+
+# 2. Stage all of those markdown files so the fixes actually make it into the commit
+find . -type f -name "*.md" ! -name "CHANGELOG.md" -exec git add {} +
+
+exit 0

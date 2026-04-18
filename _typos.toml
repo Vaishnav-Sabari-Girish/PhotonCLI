@@ -1,0 +1,10 @@
+[default.extend-words]
+Zephyr = "Zephyr"
+zephyr = "zephyr"
+ZEPHYR = "ZEPHYR"
+RTOS = "RTOS"
+CMake = "CMake"
+
+
+[files]
+extend-exclude = ["CHANGELOG.md"]
