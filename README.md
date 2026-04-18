@@ -49,7 +49,6 @@ provided `Justfile` or directly using `west`.
 To perform a clean build and flash to the Nucleo board:
 
 ```bash
-```bash
 # Generate the build system and compile the binary
 just build
 
