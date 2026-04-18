@@ -49,12 +49,28 @@ provided `Justfile` or directly using `west`.
 To perform a clean build and flash to the Nucleo board:
 
 ```bash
+```bash
+# Generate the build system and compile the binary
+just build
+
+# Flash the firmware using the onboard ST-LINK
+just flash
+```
+
+This assumes that you have [`just`](https://github.com/casey/just) installed. If
+not then use the below commands.
+
+```bash
 # Generate the build system and compile the binary
 west build -p always -b nucleo_l433rc_p .
 
 # Flash the firmware using the onboard ST-LINK
 west flash --runner openocd
 ```
+
+> [!IMPORTANT]
+> Before running the above commands, make sure the Zephyr Virtual Environment is
+> activated
 
 ## Usage
 
