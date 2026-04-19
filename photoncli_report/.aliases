@@ -1,4 +1,0 @@
-[aliases]
-tc = "typst compile"
-tw = "typst watch"
-w = "tw main.typ&; pdf main.pdf"

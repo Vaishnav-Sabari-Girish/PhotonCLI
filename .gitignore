@@ -2,3 +2,4 @@ build/
 compile_commands.json
 *.pdf
 *.mp4
+photoncli_report/*
